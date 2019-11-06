@@ -4,7 +4,7 @@ import "./App.css";
 
 function NasaPhoto(props) {
 
-
+    console.log(props)
 
 
     return (
@@ -13,8 +13,9 @@ function NasaPhoto(props) {
         <div className="photoCard">
 
             {/* data from pops goes in this image */}
-            <img className="nasaPhoto" src={props.url}></img>
+            <img className="nasaPhoto" src={props.nasaData.hdurl}></img>
 
+            <p><span className="description">Description: </span>{props.nasaData.explanation}</p>
 
 
         </div>
