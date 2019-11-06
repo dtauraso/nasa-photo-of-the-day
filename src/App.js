@@ -5,14 +5,15 @@ import "./App.css";
 
 
 function App() {
-
-  // useEffect(() => {
-  //   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  //         .then(response => {
-  //           console.log(response.data.hdurl)
-  //         })
+  const [photoAddress, setPhotoAddress] = useState("")
+  useEffect(() => {
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+          .then(response => {
+            console.log(response.data.hdurl)
+            setPhotoAddress(response.data.hdurl)
+          })
   
-  // }, [])
+  }, [photoAddress])
   
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
         app! Have fun 🚀!
       </p>
       {/* data from the api call would be passed to NasaPhoto */}
-      <NasaPhoto url={9}/>
+      <NasaPhoto url={photoAddress}/>
     </div>
   );
 }
