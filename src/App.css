@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* each content item spans the entire screen so have to align the items*/
+  align-items: center;
 }
 
 .App-logo {
@@ -23,8 +27,16 @@
   color: #61dafb;
 }
 .photoCard {
-  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  width: 300px;
   background-color: black;
+}
+.nasaPhoto {
+  width: 200px;
+  height: 200px;
+  object-fit: scale;
+  /* flex-shrink: 2; */
 }
 @keyframes App-logo-spin {
   from {
