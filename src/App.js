@@ -5,11 +5,11 @@ import "./App.css";
 
 
 function App() {
-  const [nasaData, setNasaData] = useState("")
+  const [nasaData, setNasaData] = useState({})
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=YuVkqo0dfl7mAUhCtvNt1D9HtPlGSVumVw64XpEt")
           .then(response => {
-            // console.log(response.data)
+            console.log(response.data)
             setNasaData(response.data)
           })
   
