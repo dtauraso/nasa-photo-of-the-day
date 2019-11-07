@@ -17,32 +17,11 @@ function PhotoOfTheDay() {
                 console.log("error =>", error.message)
 
               })
-      // putting nasaData here actually resulted in alot of network calls so I had to take it out
+      // putting nasaData results in an infinit change update fetch cycle inside useEffect
       }, [])
 
-
-    //   const isImage = (nasaData) => {
-    //     if (!nasaData) {
-    //         return <h3>Loading...</h3>;
     
-    //     } else {
-          
-    //       if(nasaData.media_type === "image") {
-    
-    //         // the html-like tags are data so we can return them from a function
-    //         return <NasaPhoto nasaData={nasaData} />;
-    
-    //       } else {
-    
-    //         return <p>The image may be a video</p>
-    //       }
-    //     }
-       
-    //   }
-    
-    // console.log("here",nasaData.date)
     return (<NasaPhoto nasaData={nasaData} />);
-    // return (<NasaPhoto nasaData={nasaData}/>);
 
 }
 
