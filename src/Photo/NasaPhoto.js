@@ -25,13 +25,33 @@ function NasaPhoto(props)  {
         // `;
         // need to get this associated with the <PhotoCard> that will be used below.
 
-
+        
 
         const Photo = styled.img`
             width: 80%;
           
             object-fit: scale;
             flex-shrink: 2;
+
+        `
+        const Descriptions = styled.div`
+
+            display: flex;
+            // margin-top: 30px;
+            width: 90%;
+            flex-direction: column;
+            justfy-content: flex-start;
+            align-items: flex-start;
+            border: 1px dashed black;
+            background-color: lightblue;
+            margin-top: 20px;
+            p {
+                // width: 80%;
+                padding-left: 5%;
+                padding-right: 5%;
+
+                text-align: left;
+            }
 
         `
         const PhotoCard = styled.div`
@@ -48,6 +68,7 @@ function NasaPhoto(props)  {
 
         if(props.nasaData.media_type === "image"){
             return (
+
             <Photo src={props.nasaData.hdurl}></Photo>
             // <img className="nasaPhoto" src={props.nasaData.hdurl}></img>
             );
@@ -69,6 +90,7 @@ function NasaPhoto(props)  {
 
     }
     else {
+        // now we have data to use in our jsx tags
         console.log(props)
         return (
 
@@ -91,13 +113,16 @@ function NasaPhoto(props)  {
             //     </Card>
             //     </div>
 
-            <PhotoCard  >
+            <PhotoCard>
             {/* // <div className="photoCard"> */}
     
                 {photoOrVideo(props)}
-                <p><span className="description">Name: </span>{props.nasaData.title}</p>
+                <Descriptions>
+                    <p><span className="description">Name: </span>{props.nasaData.title}</p>
 
-                <p><span className="description">Description: </span>{props.nasaData.explanation}</p>
+                    <p><span className="description">Description: </span>{props.nasaData.explanation}</p>
+
+                </Descriptions>
     
             </PhotoCard>
 
