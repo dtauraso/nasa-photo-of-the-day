@@ -27,21 +27,22 @@
 .App-link {
   color: #61dafb;
 }
-.photoCard {
+/* .photoCard {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   /* seems to keep the width scaling */
-  max-width: 900px;
-}
-.nasaPhoto {
+  /* max-width: 900px;
+} */
+/* need to comment this out? */
+/* .nasaPhoto {
 
-  width: 100%;
+  width: 80%;
 
   object-fit: scale;
   flex-shrink: 2;
-}
+} */
 .description {
   font-weight: bold;
 }
