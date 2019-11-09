@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  /* each content item spans the entire screen so have to align the items*/
+  align-items: center;
 }
 
 .App-logo {
@@ -22,7 +27,25 @@
 .App-link {
   color: #61dafb;
 }
+/* .photoCard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; */
+  /* seems to keep the width scaling */
+  /* max-width: 900px;
+} */
+/* need to comment this out? */
+/* .nasaPhoto {
 
+  width: 80%;
+
+  object-fit: scale;
+  flex-shrink: 2;
+} */
+.description {
+  font-weight: bold;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

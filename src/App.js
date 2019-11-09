@@ -1,13 +1,14 @@
 import React from "react";
+import PhotoOfTheDay from "./Photo/PhotoOfTheDay";
 import "./App.css";
+// import "./reset.css";
+// import { Button } from 'reactstrap';
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      {/* <Button>I'm a button</Button> */}
+      <PhotoOfTheDay />
     </div>
   );
 }
